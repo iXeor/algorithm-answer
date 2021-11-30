@@ -25,7 +25,7 @@ $$H(x) = -\sum_{i=1}^{buckets}\frac{1}{buckets}log_2(\frac{1}{buckets}) = -\sum_
 
 其中，有一只猪坚强死亡的状态有n种，没有猪坚强死亡的状态有1种。有人可能会问：啊，为什么就不能同时毒死多只猪坚强？别忘了，我们的***只有一个桶里有，试到了就不会再试了。如果都试过猪坚强全部存活（没用复活技能的情况下），那有毒的桶就在剩下的那些桶里。这个时候，我们的公式发生了些许变化：**我们的$b$，别忘了，它是表示状态的，这时候应该是$b = n+1$**
 那么我们再次把它带入公式，得到：
-$$H(x) = -\sum_{i=1}^{buckets}\frac{1}{buckets}log_b(\frac{1}{buckets}) \\~~~~~~~~~~~~~~ = -\sum_{i=1}^{buckets}\frac{1}{buckets} \cdot -log_b({buckets}) \\~~~~~~~~~~~~~ = log_b(buckets)~~~~~~~(其中b = n+1) $$
+$$H(x) = -\sum_{i=1}^{buckets}\frac{1}{buckets}log_b(\frac{1}{buckets})  = -\sum_{i=1}^{buckets}\frac{1}{buckets} \cdot -log_b({buckets})  = log_b(buckets)    (其中b = n+1) $$
 也就是说，我需要用n只猪坚强做$log_b(buckets)$次实验才能确定哪个桶里有毒，相对的，如果我有$log_b(buckets)$只猪坚强，我需要做n次实验。
 但是呢，我们题干里给了限定时间，猪坚强们也是不能复活的，那么这个实验的死一个猪坚强的状态次数便由测试时间`minutesToTest`和猪坚强们从喝下桶里的奇妙小饮料到死亡的时间`minutesToDie`决定。在单位时间内，用最少的猪坚强试出**带毒的桶**。我们同样可以利用上面的方法去估算到底需要多少只猪坚强才能完成实验。我想这时候还应该简单介绍一下换底公式：
 $$log_ab = \frac{logb}{loga}$$
