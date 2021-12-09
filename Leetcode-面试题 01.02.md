@@ -44,6 +44,7 @@ public:
 应某老哥需求，试着撕一下RB-Tree.
 手撕咱也撕不好，就瞎鸡儿写一个吧。本人垃圾代码制造机。还得继续学习，不然丢人（写完自己看一遍确实也挺丢人，还请老哥们见谅，多加指导）
 ![image.png](https://pic.leetcode-cn.com/1638885813-sMddpu-image.png)
+
 0）判断两字符串长度是否相等，相等就继续下述内容，不等直接`false`
 
 1）使用`insert`将`s1`装入RBTree容器
